@@ -62,8 +62,8 @@ TEST(Queen_piece,Queen_exists)
 	tmp_piece->move(*tmp_piece,6,4);
 	int nx = tmp_piece->getX();
 	int ny = tmp_piece->getY();
-	ASSERT(nx!=6);
-	ASSERT(ny!=4);
+	ASSERT_EQ(nx,6);
+	ASSERT_EQ(ny,4);
 }
 
 
