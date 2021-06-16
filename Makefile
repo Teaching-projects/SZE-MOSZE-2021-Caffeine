@@ -24,6 +24,18 @@ Pawn.o: Pawn.cpp Pawn.h Piece.h
 
 King.o: King.cpp King.h Piece.h
 	$(CC) $(CFLAGS) -c King.cpp
+	
+Queen.o: Queen.cpp Queen.h Piece.h
+	$(CC) $(CFLAGS) -c Queen.cpp
+	
+Rook.o: Rook.cpp Rook.h Piece.h
+	$(CC) $(CFLAGS) -c Rook.cpp
+	
+Bishop.o: Bishop.cpp Bishop.h Piece.h
+	$(CC) $(CFLAGS) -c Bishop.cpp
+	
+Knight.o: Knight.cpp Knight.h Piece.h
+	$(CC) $(CFLAGS) -c Knight.cpp
 
 Nullpiece.o: Nullpiece.cpp Nullpiece.h Piece.h
 	$(CC) $(CFLAGS) -c Nullpiece.cpp
