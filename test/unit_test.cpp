@@ -70,6 +70,20 @@ TEST(Queen_piece,Queen_exists)
 	ASSERT_EQ(ny,4);
 }
 
+TEST(Queen_piece,Queen_exists)
+{
+	Piece *tmp_piece = new Queen(7, 2);
+	int x = tmp_piece->getX();
+	int y = tmp_piece->getY();
+	EXPECT_EQ(x,7);
+	EXPECT_EQ(y,2);
+	tmp_piece->move(*tmp_piece,5,4);
+	int nx = tmp_piece->getX();
+	int ny = tmp_piece->getY();
+	EXPECT_EQ(nx,5);
+	EXPECT_EQ(ny,4);
+}
+
 TEST(Knight_piece,Knight_exists)
 {
 	Piece *tmp_piece = new Knight(7, 2);
