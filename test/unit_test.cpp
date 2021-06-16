@@ -138,6 +138,20 @@ TEST(Knight_piece,Knight_exists)
 	EXPECT_EQ(ny,4);
 }
 
+TEST(Knight_bad_piece,Knight_bad_exists)
+{
+	Piece *tmp_piece = new Knight(7, 2);
+	int x = tmp_piece->getX();
+	int y = tmp_piece->getY();
+	EXPECT_EQ(x,7);
+	EXPECT_EQ(y,2);
+	tmp_piece->move(*tmp_piece,3,2);
+	int nx = tmp_piece->getX();
+	int ny = tmp_piece->getY();
+	ASSERT_EQ(nx,3);
+	ASSERT_EQ(ny,2);
+}
+
 TEST(Pawn_piece,Pawn_exists)
 {
 	Piece *tmp_piece = new Pawn(3, 2);
@@ -148,6 +162,18 @@ TEST(Pawn_piece,Pawn_exists)
 	tmp_piece->move(*tmp_piece,3,3);
 	int ny = tmp_piece->getY();
 	EXPECT_EQ(ny,3);
+}
+
+TEST(Pawn_bad_piece,Pawn_bad_exists)
+{
+	Piece *tmp_piece = new Pawn(3, 2);
+	int x = tmp_piece->getX();
+	int y = tmp_piece->getY();
+	EXPECT_EQ(x,3);
+	EXPECT_EQ(y,2);
+	tmp_piece->move(*tmp_piece,4,2);
+	int ny = tmp_piece->getY();
+	ASSERT_EQ(ny,3);
 }
 
 
