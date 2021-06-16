@@ -20,6 +20,18 @@ TEST(King_piece,King_exists)
 	EXPECT_EQ(nx,2);
 }
 
+TEST(Rook_piece,Rook_exists)
+{
+	Piece *tmp_piece = new Rook(1, 1);
+	int x = tmp_piece->getX();
+	int y = tmp_piece->getY();
+	EXPECT_EQ(x,1);
+	EXPECT_EQ(y,1);
+	tmp_piece->move(*tmp_piece,5,1);
+	int nx = tmp_piece->getX();
+	EXPECT_EQ(nx,5);
+}
+
 
 int main(int argc, char** argv)
 {
