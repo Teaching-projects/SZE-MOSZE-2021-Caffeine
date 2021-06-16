@@ -42,6 +42,20 @@ TEST(Rook_piece,Rook_exists)
 	EXPECT_EQ(nx,5);
 }
 
+TEST(Rook_bad_piece,Rook_bad_exists)
+{
+	Piece *tmp_piece = new Rook(1, 1);
+	int x = tmp_piece->getX();
+	int y = tmp_piece->getY();
+	EXPECT_EQ(x,1);
+	EXPECT_EQ(y,1);
+	tmp_piece->move(*tmp_piece,5,2);
+	int nx = tmp_piece->getX();
+	int ny = tmp_piece->getY();
+	ASSERT_EQ(nx,5);
+	ASSERT_EQ(ny,2);
+}
+
 TEST(Bishop_piece,Bishop_exists)
 {
 	Piece *tmp_piece = new Bishop(5, 5);
