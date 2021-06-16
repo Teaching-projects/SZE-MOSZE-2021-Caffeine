@@ -172,8 +172,8 @@ TEST(Pawn_bad_piece,Pawn_bad_exists)
 	EXPECT_EQ(x,3);
 	EXPECT_EQ(y,2);
 	tmp_piece->move(*tmp_piece,4,2);
-	int ny = tmp_piece->getY();
-	ASSERT_EQ(ny,3);
+	int nx = tmp_piece->getX();
+	ASSERT_EQ(nx,4);
 }
 
 
