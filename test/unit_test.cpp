@@ -47,7 +47,7 @@ TEST(Bishop_piece,Bishop_exists)
 	EXPECT_EQ(y,5);
 	tmp_piece->move(*tmp_piece,6,4);
 	int nx = tmp_piece->getX();
-	int ny = tmp->piece->getY();
+	int ny = tmp_piece->getY();
 	EXPECT_EQ(nx,6);
 	EXPECT_EQ(ny,4);
 }
@@ -61,9 +61,9 @@ TEST(Queen_piece,Queen_exists)
 	EXPECT_EQ(y,2);
 	tmp_piece->move(*tmp_piece,6,4);
 	int nx = tmp_piece->getX();
-	int ny = tmp->piece->getY();
-	ASSERT_FAIL(nx,6);
-	ASSERT_FAIL(ny,4);
+	int ny = tmp_piece->getY();
+	ASSERT_FALSE(nx,6);
+	ASSERT_FALSE(ny,4);
 }
 
 
