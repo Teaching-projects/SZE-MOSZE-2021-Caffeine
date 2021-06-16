@@ -82,6 +82,20 @@ TEST(Bishop_piece,Bishop_exists)
 	EXPECT_EQ(ny,4);
 }
 
+TEST(Bishop_bad_piece,Bishop_bad_exists)
+{
+	Piece *tmp_piece = new Bishop(5, 5);
+	int x = tmp_piece->getX();
+	int y = tmp_piece->getY();
+	EXPECT_EQ(x,5);
+	EXPECT_EQ(y,5);
+	tmp_piece->move(*tmp_piece,6,5);
+	int nx = tmp_piece->getX();
+	int ny = tmp_piece->getY();
+	ASSERT_EQ(nx,6);
+	ASSERT_EQ(ny,5);
+}
+
 TEST(Queen_piece,Queen_exists)
 {
 	Piece *tmp_piece = new Queen(7, 2);
