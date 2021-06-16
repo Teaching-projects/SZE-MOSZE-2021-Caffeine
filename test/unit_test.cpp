@@ -11,6 +11,8 @@
 #include "../Queen.cpp"
 #include "../Pawn.h"
 #include "../Pawn.cpp"
+#include "../Knight.h"
+#include "../Knight.cpp"
 #include <gtest/gtest.h>
 
 #include <fstream>
@@ -66,6 +68,20 @@ TEST(Queen_piece,Queen_exists)
 	int ny = tmp_piece->getY();
 	ASSERT_EQ(nx,6);
 	ASSERT_EQ(ny,4);
+}
+
+TEST(Knight_piece,Knight_exists)
+{
+	Piece *tmp_piece = new Knight(7, 2);
+	int x = tmp_piece->getX();
+	int y = tmp_piece->getY();
+	EXPECT_EQ(x,7);
+	EXPECT_EQ(y,2);
+	tmp_piece->move(*tmp_piece,6,4);
+	int nx = tmp_piece->getX();
+	int ny = tmp_piece->getY();
+	EXPECT_EQ(nx,6);
+	EXPECT_EQ(ny,4);
 }
 
 TEST(Pawn_piece,Pawn_exists)
