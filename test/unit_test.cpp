@@ -15,7 +15,7 @@ TEST(King_piece,King_exists)
 	int y = tmp_piece->getY();
 	EXPECT_EQ(x,1);
 	EXPECT_EQ(y,1);
-	tmp_piece->move(2,1);
+	tmp_piece = tmp_piece->move(2,1);
 	int nx = tmp_piece->getX();
 	EXPECT_EQ(nx,2);
 }
