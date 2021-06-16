@@ -3,6 +3,8 @@
 #include "../Piece.cpp"
 #include "../King.h"
 #include "../King.cpp"
+#include "../Rook.h"
+#include "../Rook.cpp"
 #include <gtest/gtest.h>
 
 #include <fstream>
