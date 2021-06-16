@@ -70,7 +70,7 @@ TEST(Queen_piece,Queen_exists)
 	ASSERT_EQ(ny,4);
 }
 
-TEST(Queen_piece,Queen_exists)
+TEST(Queen_good_piece,Queen_good_exists)
 {
 	Piece *tmp_piece = new Queen(7, 2);
 	int x = tmp_piece->getX();
