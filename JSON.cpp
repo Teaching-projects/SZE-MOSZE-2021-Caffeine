@@ -8,7 +8,7 @@ std::vector<std::map<std::string,int>>JSON::readSteps(std::string str) {
 
 	std::vector<std::map<std::string,int>>seq;
 
-//	std::map<std::string, int>koord;
+
 	std::string line;
 
 	std::istringstream stream(str);
@@ -50,12 +50,8 @@ std::vector<std::map<std::string,int>>JSON::readSteps(std::string str) {
 			}
 		}
 	}
-	for (int i = 0; i < seq.size(); ++i)
-		for (auto &it : seq[i])
-		{
-			std::cout << it.first << "\t" << it.second << std::endl;
-		}
-	
+
+
 	return seq;
 }
 
