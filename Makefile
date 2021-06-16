@@ -1,6 +1,6 @@
 SHELL:=/bin/bash
 
-OBJS = JSON.o Pawn.o King.o Main.o Game.o Board.o Piece.o Nullpiece.o
+OBJS = JSON.o Pawn.o King.o Main.o Game.o Board.o Piece.o Nullpiece.o Queen.o Rook.o Knight.o Bishop.o
 OUT = a.out
 CFLAGS = -Wall -std=c++17
 CC = g++
