@@ -10,19 +10,7 @@ public:
 	~King() {}
 	void Abstract() {return;}
 
-	//std::string toString() {
-	//	std::string str = "K";
-	//	if (this->get_isWhite())
-	//	{
-	//		str =  "WK \t";
-	//	}
-	//	else
-	//		str = "BK \t";
-	//	return str;
-	//}
-
-	
 	bool checkMove(int dest_x, int dest_y);
-	/*implementálni még megszorításokat az egyes bábukra*/
+
 
 };

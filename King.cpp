@@ -6,12 +6,8 @@ bool King::checkMove(int dest_x, int dest_y) {
 	int distance = std::abs(dest_x - getX()) + std::abs(dest_y - getY());
 	if (distance != 1) {
 		res = false;
-		std::cout << "az x " << this->getX() << std::endl;
-		std::cout << "az y " << this->getY() << std::endl;
-		std::cout << "az dx " << dest_x << std::endl;
-		std::cout << "az dy " << dest_y << std::endl;
-		std::cout << res << std::endl;
+		throw(std::runtime_error("Invalid Step!"));
 	}
-	//move(dest_x, dest_y);
+
 	return res;
 }
