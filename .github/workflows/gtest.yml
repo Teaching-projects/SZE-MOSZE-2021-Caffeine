@@ -1,0 +1,12 @@
+name: UnitTests
+
+on: push
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+    container: richardvas/moszee:latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Google Test
+        run: make gtest
