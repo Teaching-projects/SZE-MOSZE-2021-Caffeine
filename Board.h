@@ -1,10 +1,18 @@
 #pragma once
 #include <vector>
 #include "Piece.h"
-#include "King.h"
+
 #include "Nullpiece.h"
+
 #include "Pawn.h"
+#include "King.h"
+#include "Queen.h"
+#include "Rook.h"
+#include "Knight.h"
+#include "Bishop.h"
+
 #include<iostream>
+
 class Board {
 	/**
 	*This class contains the necesarry pieces of the game
@@ -33,7 +41,7 @@ public:
 	void resetBoard() {}
 	/*babukat mozgato függvén*/
 	void move_piece(int px, int py, int dx, int dy);
-
+	bool checkGameOver();
 	void toString();
 	void felszabadit() {}
 };
