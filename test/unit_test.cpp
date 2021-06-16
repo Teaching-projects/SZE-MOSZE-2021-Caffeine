@@ -5,6 +5,8 @@
 #include "../King.cpp"
 #include "../Rook.h"
 #include "../Rook.cpp"
+#include "../Bishop.h"
+#include "../Bishop.cpp"
 #include <gtest/gtest.h>
 
 #include <fstream>
@@ -32,6 +34,20 @@ TEST(Rook_piece,Rook_exists)
 	tmp_piece->move(*tmp_piece,5,1);
 	int nx = tmp_piece->getX();
 	EXPECT_EQ(nx,5);
+}
+
+TEST(Bishop_piece,Bishop_exists)
+{
+	Piece *tmp_piece = new Bishop(5, 5);
+	int x = tmp_piece->getX();
+	int y = tmp_piece->getY();
+	EXPECT_EQ(x,5);
+	EXPECT_EQ(y,5);
+	tmp_piece->move(*tmp_piece,6,4);
+	int nx = tmp_piece->getX();
+	int ny = tmp->piece->getY();
+	EXPECT_EQ(nx,6);
+	EXPECT_EQ(ny,4);
 }
 
 
