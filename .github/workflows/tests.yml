@@ -5,7 +5,7 @@ on: push
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: richardvas/mosze:latest
+    container: richardvas/moszee:latest
     steps:
       - uses: actions/checkout@v2
       - name: Build
@@ -19,7 +19,7 @@ jobs:
 
   cppcheck:
     runs-on: ubuntu-latest
-    container: richardvas/mosze:latest
+    container: richardvas/moszee:latest
     steps:
       - uses: actions/checkout@v2
       - name: Code analysis
