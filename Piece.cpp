@@ -19,9 +19,7 @@ std::string Piece::toString(){
 }
 void Piece::move(Piece& p, int dest_x, int dest_y) {
 
-	//setX(dest_x);
-	//setY(dest_y);
 	p.curr_x = dest_x;
 	p.curr_y = dest_y;
-	std::cout << "movement happened\n";
+
 }
