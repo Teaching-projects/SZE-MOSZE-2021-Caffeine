@@ -7,6 +7,8 @@
 #include "../Rook.cpp"
 #include "../Bishop.h"
 #include "../Bishop.cpp"
+#include "../Queen.h"
+#include "../Queen.cpp"
 #include <gtest/gtest.h>
 
 #include <fstream>
@@ -48,6 +50,20 @@ TEST(Bishop_piece,Bishop_exists)
 	int ny = tmp->piece->getY();
 	EXPECT_EQ(nx,6);
 	EXPECT_EQ(ny,4);
+}
+
+TEST(Queen_piece,Queen_exists)
+{
+	Piece *tmp_piece = new Queen(7, 2);
+	int x = tmp_piece->getX();
+	int y = tmp_piece->getY();
+	EXPECT_EQ(x,7);
+	EXPECT_EQ(y,2);
+	tmp_piece->move(*tmp_piece,6,4);
+	int nx = tmp_piece->getX();
+	int ny = tmp->piece->getY();
+	ASSERT_FAIL(nx,6);
+	ASSERT_FAIL(ny,4);
 }
 
 
