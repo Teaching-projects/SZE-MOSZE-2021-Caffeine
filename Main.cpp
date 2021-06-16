@@ -4,129 +4,132 @@
 #include "JSON.h"
 /*
 JSON BEOLVAS
-Exception kezelés
-Game osztály- játékmenet vezérlése
-További Piecek implementálása
+Exception kezelÃ©s
+Game osztÃ¡ly- jÃ¡tÃ©kmenet vezÃ©rlÃ©se
+TovÃ¡bbi Piecek implementÃ¡lÃ¡sa
 
 FULL OOP -
 cout csak mainben
 ami const lehet az legyen
 ami private lehet az legyen - mindenhova getter setter ami private
-külön könyvtár - külön cpp 
+kÃ¼lÃ¶n kÃ¶nyvtÃ¡r - kÃ¼lÃ¶n cpp 
 
 
 
-sáncolás, döntetlen, ha marad idõ
+sÃ¡ncolÃ¡s, dÃ¶ntetlen, ha marad idÅ‘
 */
 
-/*FEJLESZTÉSI ÖTLET: argumentumként adjak egy input.txt-t ha nem üres akkor olvassa be a lépéseket
-ellenkezõ esetben kérjen inputokat és akkor az inputok lehetnének json formátumban, ezzel is okot adva az
-olvasó könyvtár megírásának
+/*FEJLESZTÃ‰SI Ã–TLET: argumentumkÃ©nt adjak egy input.txt-t ha nem Ã¼res akkor olvassa be a lÃ©pÃ©seket
+ellenkezÅ‘ esetben kÃ©rjen inputokat Ã©s akkor az inputok lehetnÃ©nek json formÃ¡tumban, ezzel is okot adva az
+olvasÃ³ kÃ¶nyvtÃ¡r megÃ­rÃ¡sÃ¡nak
 */
 int main(int argc, char* argv[])
 {
-	//for (int i = 0; i < argc; ++i)
-	//{
-	//	std::cout << argv[i] << std::endl;
+
+
+	//auto steps_from_file = JSON::parseJson(argv[1]);
+	//for (int i = 0; i < steps_from_file.size(); ++i) {
+	//	for (auto &it : steps_from_file[i])
+	//	{
+	//		std::cout << it.first << "\t" << it.second << std::endl;
+	//	}
 	//}
+	//Game *ujgame = new Game(argv[1]);
+	Game *ujgame = new Game("input.json");
 
-
-
-//	auto steps_from_file = JSON::parseJson(argv[1]);
-	Game *ujgame = new Game();
 
 	/*algortimus: minden paros sorban, minden paros elem feher*/
 
 /*##################################################*/
-	/*integralni az alabbi kirajzolast kulon osztalyként*/
+	/*integralni az alabbi kirajzolast kulon osztalykÃ©nt*/
 
-	//int i, j;
-	//int k;
+	int i, j;
+	int k;
 
-	//bool color = true;
+	bool color = true;
 
-	//for (i = 0; i < 8; ++i) {
+	for (i = 0; i < 8; ++i) {
 
-	//	bool color = true;
-	//	if (i % 2 == 0) {
-	//		for (k = 0; k < 8; ++k)
-	//			if (color) {
-	//				std::cout << "    ";
-	//				color = !color;
-	//			}
-	//			else {
-	//				std::cout << "####";
-	//				color = !color;
-	//			}
-	//	}
-	//	else
-	//		for (k = 0; k < 8; ++k)
-	//			if (color) {
-	//				std::cout << "####";
-	//				color = !color;
-	//			}
-	//			else {
-	//				std::cout << "    ";
-	//				color = !color;
-	//			}
-	//	std::cout << std::endl;
-	//		
+		bool color = true;
+		if (i % 2 == 0) {
+			for (k = 0; k < 8; ++k)
+				if (color) {
+					std::cout << "    ";
+					color = !color;
+				}
+				else {
+					std::cout << "####";
+					color = !color;
+				}
+		}
+		else
+			for (k = 0; k < 8; ++k)
+				if (color) {
+					std::cout << "####";
+					color = !color;
+				}
+				else {
+					std::cout << "    ";
+					color = !color;
+				}
+		std::cout << std::endl;
+			
 
-	//	for (j = 0; j < 8; ++j) {
+		for (j = 0; j < 8; ++j) {
 
 
 
-	//		if (i % 2 == 0) // ha a sor paros, akkor minden paros elem Feher
-	//		{
-	//			if (j % 2 == 0)
-	//			{
-	//				std::cout << "  W ";
-	//			}
-	//			else
-	//				std::cout << "# B#";
-	//		}
-	//		else //ha a sor paratlan, akkor minden paratlanodik feher
-	//		{
-	//			if (j % 2 == 0)
-	//				std::cout << "# B#";
-	//			else
-	//				std::cout << "  W ";
+			if (i % 2 == 0) // ha a sor paros, akkor minden paros elem Feher
+			{
+				if (j % 2 == 0)
+				{
+					std::cout << "  W ";
+				}
+				else
+					std::cout << "# B#";
+			}
+			else //ha a sor paratlan, akkor minden paratlanodik feher
+			{
+				if (j % 2 == 0)
+					std::cout << "# B#";
+				else
+					std::cout << "  W ";
 
-	//		}
-	//		
-	//	}
-	//	std::cout << std::endl;
-	//	color = true;
-	//	if (i % 2 == 0) {
-	//		for (k = 0; k < 8; ++k)
-	//			if (color) {
-	//				std::cout << "    ";
-	//				color = !color;
-	//			}
-	//			else {
-	//				std::cout << "####";
-	//				color = !color;
-	//			}
-	//	}
-	//	else
-	//		for (k = 0; k < 8; ++k)
-	//			if (color) {
-	//				std::cout << "####";
-	//				color = !color;
-	//			}
-	//			else {
-	//				std::cout << "    ";
-	//				color = !color;
-	//			}
-	//	std::cout << std::endl;
+			}
+			
+		}
+		std::cout << std::endl;
+		color = true;
+		if (i % 2 == 0) {
+			for (k = 0; k < 8; ++k)
+				if (color) {
+					std::cout << "    ";
+					color = !color;
+				}
+				else {
+					std::cout << "####";
+					color = !color;
+				}
+		}
+		else
+			for (k = 0; k < 8; ++k)
+				if (color) {
+					std::cout << "####";
+					color = !color;
+				}
+				else {
+					std::cout << "    ";
+					color = !color;
+				}
+		std::cout << std::endl;
 
 
 
 
 /*##################################################*/
-	/*integralni az alabbi kirajzolast kulon osztalyként*/
-//	std::cout << std::endl;
-//	}
+	/*integralni az alabbi kirajzolast kulon osztalykÃ©nt*/
+	std::cout << std::endl;
+	}
 
 	delete ujgame;
 	return 0;
