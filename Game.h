@@ -7,13 +7,19 @@ class Game {/**
 			 */
 	Board *palya;
 	bool gameover = false;
+	const std::string inputSource;
 public:
-	Game() { start();}
+	Game(const std::string& inputFile) : inputSource(inputFile) { start(); }
 	~Game() { delete palya; }
 	void start();
 
 	bool isgameover() { return this->gameover; }
 	void setgame() { gameover = true; }
+	
+	std::string getInput()
+	{
+		return this->inputSource;
+	}
 };
 
 /*
