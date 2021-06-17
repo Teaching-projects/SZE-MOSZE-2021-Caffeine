@@ -42,6 +42,8 @@ void Game::start() {
 
 		palya->move_piece(piece_x, piece_y, dest_x, dest_y);
 
+		//if (dest_x == 0 && dest_y == 0)
+		//	setgame();
 	}
 
 }
