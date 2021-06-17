@@ -5,10 +5,9 @@ on:
 jobs:
   memory_leak_test:
     runs-on: ubuntu-latest
+    container: richardvas/moszee:latest
     steps:
         - uses: actions/checkout@v2
-        - name: Installing Valgrind
-          run: sudo apt-get install valgrind
         - name: build
           run: make build
         - name: Checking memory leak

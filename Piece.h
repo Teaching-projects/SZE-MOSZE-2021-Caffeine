@@ -3,12 +3,13 @@
 #include <string>
 #include <cstdlib>
 #include <iostream>
+#include <exception>
 
 
 
-/*KELL EGY COPY CONSTRUCKTOR!!!!*/
 
-/*minden piece rendelkezik egyedi mozgast korlatozo szabalyokkal, ezeket implementalni*/
+
+
 class Piece {/**
 			 *Abstract class, that contains the essentials of a chess piece
 			 */
