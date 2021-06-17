@@ -43,6 +43,6 @@ void Game::start() {
 		palya->move_piece(piece_x, piece_y, dest_x, dest_y);
 
 	}
-	delete[] palya;
+
 }
 
