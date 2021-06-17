@@ -18,13 +18,13 @@ class Board {
 	*This class contains the necesarry pieces of the game
 	*/
 
-	/*√∂tlet: legyen egy Empty nev≈± piece spot osztaly helyett*/
+	/*ˆtlet: legyen egy Empty nev˚ piece spot osztaly helyett*/
 	std::vector<std::vector<Piece*>>board;
-	/*8x8 as m√°trix legyen*/
+	/*8x8 as m·trix legyen*/
 	
 public:
 	Board() {}
-	~Board() {/*A LEGFOGLALT BOARD VEKTORT FELSZABAD√çTANI MUSZAJ KEZZEL*/
+	~Board() {/*A LEGFOGLALT BOARD VEKTORT FELSZABADÕTANI MUSZAJ KEZZEL*/
 		//std::vector<std::vector<Piece*>>().swap(board);
 		/*swap the vector with an empty vector to deallocate the taken memory*/
 		int i, j;
@@ -39,7 +39,7 @@ public:
 	
 	void setup();
 	void resetBoard() {}
-	/*babukat mozgato f√ºggv√©n*/
+	/*babukat mozgato f¸ggvÈn*/
 	void move_piece(int px, int py, int dx, int dy);
 	bool checkGameOver();
 	void toString();

@@ -25,7 +25,8 @@ void Game::start() {
 		std::cout << e.what() << std::endl;
 
 	}
-
+	//if (palya->checkGameOver())
+	//	setgame();
 	for (int i = 0; i < koords.size(); i = i + 4) {
 		palya->move_piece(koords[i], koords[i + 1], koords[i + 2], koords[i + 3]);
 	}
