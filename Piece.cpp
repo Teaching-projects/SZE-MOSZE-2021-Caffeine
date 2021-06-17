@@ -8,12 +8,12 @@ std::string Piece::toString(){
 		{
 			str.append("W");
 			str.append(kezdo);
-			str.append("\t");
+			str.append("  ");
 		}
 		else {
 			str.append("B");
 			str.append(kezdo);
-			str.append("\t");
+			str.append("  ");
 		}
 		return str;
 }
