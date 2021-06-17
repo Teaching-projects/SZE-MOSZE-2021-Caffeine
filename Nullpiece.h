@@ -11,5 +11,6 @@ public:
 	~Nullpiece() {}
 	void Abstract() { return; }
 	virtual std::string toString();
+	/*empty squares can't move*/
 	bool checkMove(int dest_x, int dest_y) { return false; }
 };
