@@ -10,7 +10,7 @@ class Game {/**
 	const std::string inputSource;
 public:
 	Game(const std::string& inputFile) : inputSource(inputFile) { start(); }
-	~Game() { delete palya; }
+	~Game() { }
 	void start();
 
 	bool isgameover() { return this->gameover; }
