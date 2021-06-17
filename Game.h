@@ -9,8 +9,8 @@ class Game {/**
 	bool gameover = false;
 	const std::string inputSource;
 public:
-	Game(const std::string& inputFile) : inputSource(inputFile) { start(); }
-	~Game() { }
+	Game(const std::string& inputFile) : inputSource(inputFile) {}
+	~Game() { delete palya; }
 	void start();
 
 	bool isgameover() { return this->gameover; }
