@@ -5,6 +5,7 @@
 
 
 
+
 int main(int argc, char* argv[])
 {
 
@@ -16,6 +17,7 @@ int main(int argc, char* argv[])
 	
 	Game *ujgame = new Game(argv[1]);
 	
+
 
 	delete ujgame;
 	return 0;
