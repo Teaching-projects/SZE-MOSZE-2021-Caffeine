@@ -22,12 +22,3 @@ public:
 	}
 };
 
-/*
-A játékmenet a következõ :
-	1. Board.h setup függvény meghívása
-	2. egy While(!gameover) ciklus inputokat bekérni felhasználóktól felváltva
-	3. inputonként gameovert ellenõrzni.
-
-
-Mikor van vége a játéknak ? - ha az egyik királyt leütjük.
-*/
