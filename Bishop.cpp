@@ -1,7 +1,7 @@
 #include "Bishop.h"
 
 bool Bishop::checkMove(int dest_x, int dest_y) {
-	/*a futó léphet bármerre átlósan*/
+	/*method to filter bad moves*/
 	bool res = true;
 	if (abs(this->getX() - dest_x) != abs(this->getY() - dest_y)) {
 		res = false;
