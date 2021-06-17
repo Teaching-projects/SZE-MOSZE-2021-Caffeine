@@ -2,7 +2,7 @@
 #include "Knight.h"
 
 bool Knight::checkMove(int dest_x, int dest_y) {
-	
+	/*method to filter bad moves*/
 	bool res = false;
 	int dist = abs((this->getX() - dest_x) + (this->getY()- dest_y));
 	if (dist == 3 && this->getX() - dest_x != 0 && this->getY() - dest_y != 0) {
@@ -33,3 +33,4 @@ bool Knight::checkMove(int dest_x, int dest_y) {
 
 
 }
+
