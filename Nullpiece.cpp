@@ -1,7 +1,7 @@
 #include "Nullpiece.h"
 
 std::string Nullpiece::toString() {
-	std::string str = "\t";
+	std::string str = "    ";
 
 	return str;
 }
