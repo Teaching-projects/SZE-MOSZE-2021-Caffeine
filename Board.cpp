@@ -153,11 +153,13 @@ void Board::move_piece(int px, int py, int dx, int dy) {
 
 	try {
 		if (board[px][py]->checkMove(dx, dy)) {
-			board[px][py]->move(*board[px][py], dx, dy);
+			
 
 			
 
 			auto dummy = board[px][py];
+			
+			board[px][py]->move(*board[px][py], dx, dy);
 			board[dx][dy] = dummy;
 			delete board[dx][dy];
 			board[px][py] = new Nullpiece(px, py);
