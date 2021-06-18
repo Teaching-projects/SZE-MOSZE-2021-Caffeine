@@ -17,6 +17,7 @@ class Piece {/**
 	bool isWhite = false;
 	int curr_x, curr_y;
 	const std::string name;
+	bool leftbehind = false;
 	
 public:
 	/*constructor*/
@@ -42,9 +43,18 @@ public:
 	{
 		isDead = true;
 	}
+
+	bool getisDead() {
+		return isDead;
+	}
+
 	void setWhite()
 	{
 		isWhite = true;
+	}
+
+	void set_leftbehind() {
+		leftbehind = !leftbehind;
 	}
 	/*getters*/
 	int getX()
@@ -62,6 +72,9 @@ public:
 	bool get_isWhite()
 	{
 		return isWhite;
+	}
+	bool get_leftbehind() {
+		return leftbehind;
 	}
 	/*check whether the given piece can move to the destination, based on its individual moveset*/
 	virtual bool checkMove(int dest_x, int dest_y)=0;

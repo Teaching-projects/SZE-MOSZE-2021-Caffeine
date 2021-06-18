@@ -170,17 +170,18 @@ void Board::move_piece(int px, int py, int dx, int dy) {
 			/*non empty field / attack*/
 			else
 			{
-				std::vector<Piece*>tmp;
+
+				auto dummy = board[dx][dy];
+
+				//akt babu to dest
+				//board[px][py]->move(*board[px][py], dx, dy);
+				board[dx][dy] = board[px][py];
 
 				board[px][py]->move(*board[px][py], dx, dy);
 
-				board[dx][dy] = board[px][py];
-
-				auto dummy = new Nullpiece(px, py);
-				board[px][py]=dummy;
-				
-				tmp.push_back(dummy);
-				board.push_back(tmp);
+				board[px][py] = dummy;
+				board[px][py]->killpiece();
+				//board[px][py]->set_leftbehind();
 			}
 			//
 			//board[px][py] = new Nullpiece(px, py);
@@ -210,8 +211,13 @@ void Board::toString() {
 			std::cout <<i<< "  ";
 
 			for (j = 0; j < 8; ++j) {
-
-				std::cout << board[i][j]->toString();
+				if (!board[i][j]->getisDead()) {
+					std::cout << board[i][j]->toString();
+				}
+				else
+				{
+					std::cout << "   ";
+				}
 			}
 			std::cout << std::endl;
 		}
@@ -228,7 +234,11 @@ bool Board::checkGameOver()
 	{
 		for (j = 0; j < 8; ++j) {
 			if (dynamic_cast<King*>(board[i][j]))
-				num_kings++;
+			{
+				if(!board[i][j]->getisDead())
+					num_kings++;
+			}
+			
 		}
 
 	}
