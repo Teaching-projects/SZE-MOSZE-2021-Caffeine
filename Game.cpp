@@ -26,19 +26,20 @@ void Game::start() {
 
 	}
 
-	//for (int i = 0; i < koords.size(); i = i + 4) {
-	//	palya->move_piece(koords[i], koords[i + 1], koords[i + 2], koords[i + 3]);
-	//}
-	//if (palya->checkGameOver())
-	//	setgame();
-	//while (!isgameover()) {
+	for (int i = 0; i < koords.size(); i = i + 4) {
+		palya->move_piece(koords[i], koords[i + 1], koords[i + 2], koords[i + 3]);
+	}
+	if (palya->checkGameOver())
+		setgame();
+
+	while (!isgameover()) {
 
 
-	//	std::cin >> piece_x >> piece_y >> dest_x >> dest_y;		
+		std::cin >> piece_x >> piece_y >> dest_x >> dest_y;		
 
-	//	palya->move_piece(piece_x, piece_y, dest_x, dest_y);
+		palya->move_piece(piece_x, piece_y, dest_x, dest_y);
 
-	//}
-	setgame();
+	}
+	//setgame();
 }
 
