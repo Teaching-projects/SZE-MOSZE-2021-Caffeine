@@ -28,3 +28,14 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           path: ./cppcheck_performance.txt
+
+          
+  memory_leak_test:
+    runs-on: ubuntu-latest
+    container: richardvas/moszee:latest
+    steps:
+        - uses: actions/checkout@v2
+        - name: build
+          run: make build
+        - name: Checking memory leak
+          run: make valgrind
