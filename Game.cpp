@@ -31,18 +31,15 @@ void Game::start() {
 	}
 	if (palya->checkGameOver())
 		setgame();
+
 	while (!isgameover()) {
 
 
-
-		std::cin >> piece_x >> piece_y >> dest_x >> dest_y;
-
-
-		
+		std::cin >> piece_x >> piece_y >> dest_x >> dest_y;		
 
 		palya->move_piece(piece_x, piece_y, dest_x, dest_y);
 
 	}
-	delete[] palya;
+
 }
 

@@ -1,6 +1,7 @@
 #include "Piece.h"
 
 std::string Piece::toString(){
+	if (!get_leftbehind()) {
 		char k = name[0];
 		std::string kezdo{ k };
 		std::string str = "";
@@ -16,6 +17,11 @@ std::string Piece::toString(){
 			str.append("  ");
 		}
 		return str;
+	}
+	else {
+		std::string str = "    ";
+		this->set_leftbehind();
+	}
 }
 void Piece::move(Piece& p, int dest_x, int dest_y) {
 

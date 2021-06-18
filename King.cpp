@@ -1,35 +1,13 @@
+#include"King.h"
 
-#include "Knight.h"
-
-bool Knight::checkMove(int dest_x, int dest_y) {
-	
-	bool res = false;
-	int dist = abs((this->getX() - dest_x) + (this->getY()- dest_y));
-	if (dist == 3 && this->getX() - dest_x != 0 && this->getY() - dest_y != 0) {
-		res = true;
-	}
-	else {
+bool King::checkMove(int dest_x, int dest_y) {
+	/*a kiraly lephet barmilyen tablaban levo mezoben, ammenyiben az 1 egyseg tavolsagra van.*/
+	bool res = true;
+	int distance = std::abs(dest_x - getX()) + std::abs(dest_y - getY());
+	if (distance != 1) {
+		res = false;
 		throw(std::runtime_error("Invalid Step!"));
 	}
+
 	return res;
-}
- std::string  Knight::toString() {
-
-	 std::string str = "";
-	 if (this->get_isWhite())
-	 {
-		 str.append("W");
-		 str.append("N");
-		 str.append("  ");
-	 }
-	 else {
-		 str.append("B");
-		 str.append("N");
-		 str.append("  ");
-	 }
-	 return str;
-
-
-
-
 }
