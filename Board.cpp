@@ -141,8 +141,10 @@ void Board::setup() {
 
 			}
 		}
-		board.push_back(tmp);
 
+		board.push_back(tmp);
+		
+		
 	}
 
 }

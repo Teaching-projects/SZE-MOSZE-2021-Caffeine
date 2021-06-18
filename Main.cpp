@@ -1,4 +1,4 @@
-
+﻿
 #include "Game.h"
 #include <iostream>
 #include "JSON.h"
@@ -15,7 +15,7 @@ int main(int argc, char* argv[])
 		throw(std::runtime_error("Missing argument!"));
 	
 	Game *ujgame = new Game(argv[1]);
-	ujgame->start();
+	/*ujgame->start();*/
 
 	delete ujgame;
 	return 0;
