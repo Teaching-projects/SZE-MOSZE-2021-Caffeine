@@ -76,9 +76,13 @@ Inheritance diagram for Piece:</div>
  <div class="center">
   <img src="class_piece.png" usemap="#Piece_map" alt=""/>
   <map id="Piece_map" name="Piece_map">
-<area href="class_king.html" alt="King" shape="rect" coords="0,56,65,80"/>
-<area href="class_nullpiece.html" alt="Nullpiece" shape="rect" coords="75,56,140,80"/>
-<area href="class_pawn.html" alt="Pawn" shape="rect" coords="150,56,215,80"/>
+<area href="class_bishop.html" alt="Bishop" shape="rect" coords="0,56,65,80"/>
+<area href="class_king.html" alt="King" shape="rect" coords="75,56,140,80"/>
+<area href="class_knight.html" alt="Knight" shape="rect" coords="150,56,215,80"/>
+<area href="class_nullpiece.html" alt="Nullpiece" shape="rect" coords="225,56,290,80"/>
+<area href="class_pawn.html" alt="Pawn" shape="rect" coords="300,56,365,80"/>
+<area href="class_queen.html" alt="Queen" shape="rect" coords="375,56,440,80"/>
+<area href="class_rook.html" alt="Rook" shape="rect" coords="450,56,515,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -102,9 +106,15 @@ virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><b>toStri
 <tr class="memitem:a3ddadb076f2da05c02c96f098b66a6fe"><td class="memItemLeft" align="right" valign="top"><a id="a3ddadb076f2da05c02c96f098b66a6fe"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>killpiece</b> ()</td></tr>
 <tr class="separator:a3ddadb076f2da05c02c96f098b66a6fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad2872c9ebbc584b8633755d89592b96"><td class="memItemLeft" align="right" valign="top"><a id="aad2872c9ebbc584b8633755d89592b96"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>getisDead</b> ()</td></tr>
+<tr class="separator:aad2872c9ebbc584b8633755d89592b96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21bd860ca5c93015ff5963a9cc148822"><td class="memItemLeft" align="right" valign="top"><a id="a21bd860ca5c93015ff5963a9cc148822"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setWhite</b> ()</td></tr>
 <tr class="separator:a21bd860ca5c93015ff5963a9cc148822"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92dd3fa09fa82f3a48aebafccec8b592"><td class="memItemLeft" align="right" valign="top"><a id="a92dd3fa09fa82f3a48aebafccec8b592"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set_leftbehind</b> ()</td></tr>
+<tr class="separator:a92dd3fa09fa82f3a48aebafccec8b592"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6f603eec384c98793bb120649b7ad7f"><td class="memItemLeft" align="right" valign="top"><a id="aa6f603eec384c98793bb120649b7ad7f"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>getX</b> ()</td></tr>
 <tr class="separator:aa6f603eec384c98793bb120649b7ad7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -117,6 +127,9 @@ const std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getName<
 <tr class="memitem:afa6888b4fa6e03b1d04562f3b25ffaeb"><td class="memItemLeft" align="right" valign="top"><a id="afa6888b4fa6e03b1d04562f3b25ffaeb"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_isWhite</b> ()</td></tr>
 <tr class="separator:afa6888b4fa6e03b1d04562f3b25ffaeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a926e079c0870a5cc8517624689ce293a"><td class="memItemLeft" align="right" valign="top"><a id="a926e079c0870a5cc8517624689ce293a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_leftbehind</b> ()</td></tr>
+<tr class="separator:a926e079c0870a5cc8517624689ce293a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d39c27f2d8975eeadaa9dd380e0a2f0"><td class="memItemLeft" align="right" valign="top"><a id="a4d39c27f2d8975eeadaa9dd380e0a2f0"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>checkMove</b> (int dest_x, int dest_y)=0</td></tr>
 <tr class="separator:a4d39c27f2d8975eeadaa9dd380e0a2f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
