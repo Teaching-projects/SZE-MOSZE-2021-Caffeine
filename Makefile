@@ -40,7 +40,7 @@ Knight.o: Knight.cpp Knight.h Piece.h
 Nullpiece.o: Nullpiece.cpp Nullpiece.h Piece.h
 	$(CC) $(CFLAGS) -c Nullpiece.cpp
 
-Board.o: Board.cpp Board.h Piece.h King.h Piece.h Nullpiece.h
+Board.o: Board.cpp Board.h Piece.h King.h Piece.h Nullpiece.h Pawn.h Queen.h Rook.h Knight.h Bishop.h
 	$(CC) $(CFLAGS) -c Board.cpp
 
 Game.o: Game.cpp Game.h Board.h JSON.h
