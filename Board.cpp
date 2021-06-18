@@ -154,15 +154,36 @@ void Board::move_piece(int px, int py, int dx, int dy) {
 	try {
 		if (board[px][py]->checkMove(dx, dy)) {
 			
+			if (dynamic_cast<Nullpiece*>(board[dx][dy]))
+			{
+				//empty field to store
+				auto dummy = board[dx][dy];
 
-			
+				//akt babu to dest
+				//board[px][py]->move(*board[px][py], dx, dy);
+				board[dx][dy] = board[px][py];
 
-			auto dummy = board[px][py];
-			
-			board[px][py]->move(*board[px][py], dx, dy);
-			board[dx][dy] = dummy;
-			delete board[px][py];
-			board[px][py] = new Nullpiece(px, py);
+				board[px][py]->move(*board[px][py], dx, dy);
+
+				board[px][py] = dummy;
+			}
+			/*non empty field / attack*/
+			else
+			{
+				std::vector<Piece*>tmp;
+
+				board[px][py]->move(*board[px][py], dx, dy);
+
+				board[dx][dy] = board[px][py];
+
+				auto dummy = new Nullpiece(px, py);
+				board[px][py]=dummy;
+				
+				tmp.push_back(dummy);
+				board.push_back(tmp);
+			}
+			//
+			//board[px][py] = new Nullpiece(px, py);
 
 		}
 	}
