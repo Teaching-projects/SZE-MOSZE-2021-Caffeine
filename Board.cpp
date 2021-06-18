@@ -161,7 +161,7 @@ void Board::move_piece(int px, int py, int dx, int dy) {
 			
 			board[px][py]->move(*board[px][py], dx, dy);
 			board[dx][dy] = dummy;
-			delete board[dx][dy];
+			delete board[px][py];
 			board[px][py] = new Nullpiece(px, py);
 
 		}
