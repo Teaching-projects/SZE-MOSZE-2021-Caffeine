@@ -3,12 +3,12 @@
 
 
 class Pawn : public Piece {
-
+	/**
+	*class that stores the specific methods for pawn type pieces
+	*/
 public:
 	Pawn(int x, int y) : Piece(x, y, "Pawn") {}
 	~Pawn() {}
 	void Abstract() { return; }
-
-	/*pawn can move vertically and attack in right and left strife */
 	bool checkMove(int dest_x, int dest_y);
 };
