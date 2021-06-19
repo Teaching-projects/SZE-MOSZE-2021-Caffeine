@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['checkmove_24',['checkMove',['../class_bishop.html#ab007484a4642b610f099a29dd7d443e2',1,'Bishop']]]
+  ['bishop_24',['Bishop',['../class_bishop.html#ac2e01ff918fb8736751a9397d011c989',1,'Bishop']]]
 ];
