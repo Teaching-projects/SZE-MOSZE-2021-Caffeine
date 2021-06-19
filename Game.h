@@ -2,9 +2,10 @@
 #include "Board.h"
 #include "JSON.h"
 
-class Game {/**
-			 *Class that responsible to run the gameplay, ask and handle the flows of the inputs
-			 */
+class Game {		
+	/**
+	*Class that handles running the gameplay, asking for and processing the inputs
+	*/
 	Board *palya;
 	bool gameover = false;
 	const std::string inputSource;
