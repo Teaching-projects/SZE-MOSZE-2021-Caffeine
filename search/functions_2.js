@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['move_5fpiece_32',['move_piece',['../class_board.html#ac5cbb39b27b871d920214b9e74edf000',1,'Board']]]
+  ['king_32',['King',['../class_king.html#a8fb8ba7a143353b38610f4cdbe6831b3',1,'King']]]
 ];
