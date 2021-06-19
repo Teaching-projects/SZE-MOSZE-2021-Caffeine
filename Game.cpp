@@ -1,14 +1,23 @@
 #include"Game.h"
 
 void Game::start() {
+	/**
+	*method for starting a new game
+	*/
 	int piece_x, piece_y, dest_x, dest_y;
 	std::vector<int>koords;
 	palya = new Board();
 	palya->setup();
 	palya->toString();
+	/**
+	*uses the methods of the board class
+	*/
 
 
 	try {
+		/**
+		*gets the moves from a JSON file
+		*/
 		auto steps_from_file = JSON::parseJson(getInput());
 		for (int i = 0; i < steps_from_file.size(); ++i) {
 
@@ -33,7 +42,9 @@ void Game::start() {
 		setgame();
 
 	while (!isgameover()) {
-
+		/**
+		*while the game is not over, gets the next move from input
+		*/
 
 		std::cin >> piece_x >> piece_y >> dest_x >> dest_y;		
 
