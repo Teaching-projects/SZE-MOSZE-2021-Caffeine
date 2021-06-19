@@ -1,7 +1,9 @@
 #include "Board.h"
 
 void Board::setup() {
-
+	/**
+	*method for setting up the board at the start of a match	
+	*/
 	int i, j;
 
 	for (i = 0; i < 8; ++i)
@@ -150,57 +152,59 @@ void Board::setup() {
 }
 
 void Board::move_piece(int px, int py, int dx, int dy) {
-
+	/**
+	*method for moving the pieces on the board
+	*/
 	try {
 		if (board[px][py]->checkMove(dx, dy)) {
 			
 			if (dynamic_cast<Nullpiece*>(board[dx][dy]))
 			{
-				//empty field to store
+				/**
+				*empty field to store
+				*/
 				auto dummy = board[dx][dy];
 
-				//akt babu to dest
-				//board[px][py]->move(*board[px][py], dx, dy);
+				/**
+				*moving current piece to dest
+				*/
 				board[dx][dy] = board[px][py];
 
 				board[px][py]->move(*board[px][py], dx, dy);
 
 				board[px][py] = dummy;
 			}
-			/*non empty field / attack*/
+			/**
+			*non empty field / attack
+			*/
 			else
 			{
 
 				auto dummy = board[dx][dy];
 
-				//akt babu to dest
-				//board[px][py]->move(*board[px][py], dx, dy);
+				/**
+				*moving current piece to dest
+				*/
 				board[dx][dy] = board[px][py];
 
 				board[px][py]->move(*board[px][py], dx, dy);
 
 				board[px][py] = dummy;
 				board[px][py]->killpiece();
-				//board[px][py]->set_leftbehind();
 			}
-			//
-			//board[px][py] = new Nullpiece(px, py);
-
 		}
 	}
 	catch(const std::exception &e){
-
 		std::cout << e.what() << std::endl;
-		
 	}
-
-
-
 	this->toString();
 }
 
 void Board::toString() {
 	{
+		/**
+		*method to convert class data to string
+		*/
 		int i, j;
 		std::cout << "    ";
 		for (int l = 0; l < 8; ++l)
@@ -227,6 +231,9 @@ void Board::toString() {
 
 bool Board::checkGameOver()
 {
+	/**
+	*method for checking whether the game is over after a move
+	*/
 	int i, j;
 	int num_kings = 0;
 	bool gameover = false;
