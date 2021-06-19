@@ -15,12 +15,9 @@
 
 class Board {
 	/**
-	*This class contains the necesarry pieces of the game
+	*This class contains the necessary pieces of the game
 	*/
-
-	/*ötlet: legyen egy Empty nevû piece spot osztaly helyett*/
 	std::vector<std::vector<Piece*>>board;
-	/*8x8 as mátrix legyen*/
 	
 public:
 	Board() {}
@@ -38,10 +35,7 @@ public:
 	
 	void setup();
 	void resetBoard() {}
-	/*babukat mozgato függvén*/
 	void move_piece(int px, int py, int dx, int dy);
 	bool checkGameOver();
 	void toString();
-
-
 };
