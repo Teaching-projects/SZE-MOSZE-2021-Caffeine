@@ -9,7 +9,9 @@
 
 
 class JSON {
-
+	/**
+	*this class is responsible for reading and processing input JSON files
+	*/
 	std::vector<std::vector<int>>steps;
 public:
 	JSON(){}
