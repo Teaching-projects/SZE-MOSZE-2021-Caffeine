@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['setup_35',['setup',['../class_board.html#ad959bfbc697af8892878017711e3ad4f',1,'Board']]],
-  ['start_36',['start',['../class_game.html#a3d9b98f7c4a96ecf578f75b96c9f0e90',1,'Game']]]
+  ['nullpiece_35',['Nullpiece',['../class_nullpiece.html#a56ee363493cb71ba31b6919b11774ccb',1,'Nullpiece']]]
 ];
