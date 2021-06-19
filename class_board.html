@@ -73,22 +73,118 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad959bfbc697af8892878017711e3ad4f"><td class="memItemLeft" align="right" valign="top"><a id="ad959bfbc697af8892878017711e3ad4f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setup</b> ()</td></tr>
+<tr class="memitem:ad959bfbc697af8892878017711e3ad4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#ad959bfbc697af8892878017711e3ad4f">setup</a> ()</td></tr>
 <tr class="separator:ad959bfbc697af8892878017711e3ad4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7cef7a9ca499d64c71cb170d67f76ad0"><td class="memItemLeft" align="right" valign="top"><a id="a7cef7a9ca499d64c71cb170d67f76ad0"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>resetBoard</b> ()</td></tr>
 <tr class="separator:a7cef7a9ca499d64c71cb170d67f76ad0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5cbb39b27b871d920214b9e74edf000"><td class="memItemLeft" align="right" valign="top"><a id="ac5cbb39b27b871d920214b9e74edf000"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>move_piece</b> (int px, int py, int dx, int dy)</td></tr>
+<tr class="memitem:ac5cbb39b27b871d920214b9e74edf000"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#ac5cbb39b27b871d920214b9e74edf000">move_piece</a> (int px, int py, int dx, int dy)</td></tr>
 <tr class="separator:ac5cbb39b27b871d920214b9e74edf000"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52fb04fce1c17a4e49d4fdd890ab2b9a"><td class="memItemLeft" align="right" valign="top"><a id="a52fb04fce1c17a4e49d4fdd890ab2b9a"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>checkGameOver</b> ()</td></tr>
+<tr class="memitem:a52fb04fce1c17a4e49d4fdd890ab2b9a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#a52fb04fce1c17a4e49d4fdd890ab2b9a">checkGameOver</a> ()</td></tr>
 <tr class="separator:a52fb04fce1c17a4e49d4fdd890ab2b9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a541d9a1d8843646a91a5253ca0404f20"><td class="memItemLeft" align="right" valign="top"><a id="a541d9a1d8843646a91a5253ca0404f20"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>toString</b> ()</td></tr>
+<tr class="memitem:a541d9a1d8843646a91a5253ca0404f20"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#a541d9a1d8843646a91a5253ca0404f20">toString</a> ()</td></tr>
 <tr class="separator:a541d9a1d8843646a91a5253ca0404f20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a52fb04fce1c17a4e49d4fdd890ab2b9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52fb04fce1c17a4e49d4fdd890ab2b9a">&#9670;&nbsp;</a></span>checkGameOver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Board::checkGameOver </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>method for checking whether the game is over after a move</p>
+
+</div>
+</div>
+<a id="ac5cbb39b27b871d920214b9e74edf000"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5cbb39b27b871d920214b9e74edf000">&#9670;&nbsp;</a></span>move_piece()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Board::move_piece </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>px</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>py</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dy</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>method for moving the pieces on the board</p>
+<p>empty field to store</p>
+<p>moving current piece to dest</p>
+<p>non empty field / attack</p>
+<p>moving current piece to dest</p>
+
+</div>
+</div>
+<a id="ad959bfbc697af8892878017711e3ad4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad959bfbc697af8892878017711e3ad4f">&#9670;&nbsp;</a></span>setup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Board::setup </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>method for setting up the board at the start of a match</p>
+
+</div>
+</div>
+<a id="a541d9a1d8843646a91a5253ca0404f20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a541d9a1d8843646a91a5253ca0404f20">&#9670;&nbsp;</a></span>toString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Board::toString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>method to convert class data to string</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_board_8h_source.html">Board.h</a></li>
 <li>Board.cpp</li>
